@@ -43,11 +43,12 @@ strong {
 }
 
 a {
-	color: #0000FF;
+	color: #FFFFFF;
+	text-decoration: none;
 }
 
 a:hover {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .container {

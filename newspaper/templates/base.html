@@ -18,14 +18,30 @@
 	<div id="header-wrapper">
 	  <div id="header" class="container">
 		<div id="logo">
-		  <h1><a href="#">LeBanlieuZar</a></h1>
+		  <h1><a href="{{ url_for('category') }}">LeBanlieuZar</a></h1>
 		</div>
 		<div id="menu">
 		  <ul>
-			<li class="current_page_item"><a href="#">Politique</a></li>
-			<li><a href="#">Economie</a></li>
-			<li><a href="#">Société</a></li>
-			<li><a href="{{ url_for('category', categ='faits_divers') }}">Faits Divers</a></li>
+			{% if param == 'politique' %}
+			  <li class="current_page_item"><a href="{{ url_for('category', categ='politique') }}">Politique</a></li>
+			{% else %}
+			  <li><a href="{{ url_for('category', categ='politique') }}">Politique</a></li>
+			{% endif %}
+			{% if param == 'economie' %}
+			  <li class="current_page_item"><a href="{{ url_for('category', categ='economie') }}">Economie</a></li>
+			{% else %}
+			  <li><a href="{{ url_for('category', categ='economie') }}">Economie</a></li>
+			{% endif %}
+			{% if param == 'societe' %}
+			  <li class="current_page_item"><a href="{{ url_for('category', categ='societe') }}">Société</a></li>
+			{% else %}
+			  <li><a href="{{ url_for('category', categ='societe') }}">Société</a></li>
+			{% endif %}
+			{% if param == 'faits_divers' %}
+			  <li class="current_page_item"><a href="{{ url_for('category', categ='faits_divers') }}">Faits Divers</a></li>
+			{% else %}
+			  <li><a href="{{ url_for('category', categ='faits_divers') }}">Faits Divers</a></li>
+			{% endif %}
 		  </ul>
 		</div>
 	  </div>
