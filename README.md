@@ -4,4 +4,4 @@ The application displays some articles from a famous french newpaper around Pari
 
 It has been developed with Flask v3.7.9 while using Flask framework v.1.1.2
 
-The website can be seen in the projects section on www.6netic.eu
+The website can be seen in the projects section on https://lebanlieuzar.herokuapp.com/
